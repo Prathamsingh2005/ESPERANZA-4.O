@@ -138,765 +138,7 @@ export default function Home() {
   };
 
   return (
-    <main className="site">
-
-      {/* =====================================================
-          MAIN MUSIC
-      ===================================================== */}
-
-      <audio
-        ref={audioRef}
-        src="/song.m4a"
-        loop
-        preload="auto"
-      />
-
-      {/* =====================================================
-          PARTICLES
-      ===================================================== */}
-
-      <Particles />
-
-      {/* =====================================================
-          CINEMATIC INTRO
-      ===================================================== */}
-
-      <section
-        className={`intro ${intro ? "intro-visible" : "intro-hidden"}`}
-      >
-        <div className="intro-light intro-light-one" />
-        <div className="intro-light intro-light-two" />
-        <div className="intro-light intro-light-three" />
-
-        <div className="curtain curtain-left" />
-        <div className="curtain curtain-right" />
-
-        <div className="intro-content">
-
-          <div className="intro-logo">
-            <img
-              src="/logosrms.jpeg"
-              alt="SRMS"
-            />
-          </div>
-
-          <p className="intro-small">
-            SHRI RAM MURTI SMARAK
-          </p>
-
-          <p className="intro-college">
-            INTERNATIONAL BUSINESS SCHOOL
-          </p>
-
-          <div className="intro-divider">
-            <span />
-            <b>✦</b>
-            <span />
-          </div>
-
-          <h1 className="intro-title">
-            ESPERANZA
-          </h1>
-
-          <p className="intro-subtitle">
-            FRESHERS 2K26
-          </p>
-
-          <button
-            onClick={startExperience}
-            className="enter-button"
-          >
-            <span>ENTER THE NIGHT</span>
-          </button>
-
-          <p className="intro-hint">
-            TAP TO BEGIN YOUR JOURNEY
-          </p>
-
-        </div>
-      </section>
-
-      {/* =====================================================
-          MUSIC CONTROL
-      ===================================================== */}
-
-      <button
-        className={`music-control ${
-          musicOn ? "music-active" : ""
-        }`}
-        onClick={toggleMusic}
-      >
-        <span className="music-icon">
-          {musicOn ? "♫" : "×"}
-        </span>
-
-        <span>
-          {musicOn ? "MUSIC ON" : "MUSIC OFF"}
-        </span>
-      </button>
-
-      {/* =====================================================
-          HEADER
-      ===================================================== */}
-
-      <header className="header">
-
-        <div className="header-inner">
-
-          <div className="brand">
-
-            <div className="brand-logo">
-              <img
-                src="/logosrms.jpeg"
-                alt="SRMS"
-              />
-            </div>
-
-            <div>
-              <p className="brand-title">
-                SRMS IBS
-              </p>
-
-              <p className="brand-subtitle">
-                FRESHERS 2K26
-              </p>
-            </div>
-
-          </div>
-
-          <div className="event-pill">
-            ESPERANZA 4.0
-          </div>
-
-        </div>
-
-      </header>
-
-      {/* =====================================================
-          HERO
-      ===================================================== */}
-
-      <section className="hero">
-
-        <div className="hero-orb hero-orb-red" />
-        <div className="hero-orb hero-orb-purple" />
-        <div className="hero-orb hero-orb-blue" />
-
-        <div className="beam beam-left" />
-        <div className="beam beam-right" />
-        <div className="beam beam-center" />
-
-        <div className="hero-content">
-
-          {/* COLLEGE */}
-
-          <div className="college-branding">
-
-            <div className="hero-logo">
-              <img
-                src="/logosrms.jpeg"
-                alt="Shri Ram Murti Smarak"
-              />
-            </div>
-
-            <h2>
-              SHRI RAM MURTI SMARAK
-            </h2>
-
-            <h3>
-              INTERNATIONAL BUSINESS SCHOOL
-            </h3>
-
-            <div className="presented">
-              <span />
-              <p>PRESENTS</p>
-              <span />
-            </div>
-
-          </div>
-
-          {/* EVENT */}
-
-          <div className="event-heading">
-
-            <p className="freshers-label">
-              FRESHERS PARTY
-            </p>
-
-            <h1>
-              ESPERANZA
-            </h1>
-
-            <div className="four-point-zero">
-
-              <span />
-              <b>4.0</b>
-              <span />
-
-            </div>
-
-            <p className="bollywood">
-              BOLLYWOOD NIGHTS
-            </p>
-
-            <p className="eras">
-              90s&nbsp;&nbsp;•&nbsp;&nbsp;2000s&nbsp;&nbsp;•&nbsp;&nbsp;2010s&nbsp;&nbsp;•&nbsp;&nbsp;CURRENT
-            </p>
-
-          </div>
-
-          {/* POSTER */}
-
-          <div className="poster-section">
-
-            <button
-              className={`poster-button ${
-                posterOpen ? "poster-open" : ""
-              }`}
-              onClick={() => setPosterOpen(true)}
-              aria-label="Open invitation poster"
-            >
-
-              <div className="poster-glow" />
-
-              <div className="poster-card">
-
-                <img
-                  src="/poster.png"
-                  alt="Esperanza 4.0 Freshers Party"
-                />
-
-                {!posterOpen && (
-                  <div className="poster-overlay">
-
-                    <div className="tap-circle">
-                      <span>✦</span>
-                    </div>
-
-                    <p>
-                      TAP TO OPEN
-                    </p>
-
-                    <small>
-                      YOUR INVITATION AWAITS
-                    </small>
-
-                  </div>
-                )}
-
-                <div className="poster-shine" />
-
-                <span className="poster-corner top-left" />
-                <span className="poster-corner top-right" />
-                <span className="poster-corner bottom-left" />
-                <span className="poster-corner bottom-right" />
-
-              </div>
-
-            </button>
-
-          </div>
-
-          <div className="scroll-hint">
-            <span>SCROLL TO DISCOVER</span>
-            <b>↓</b>
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* =====================================================
-          YOU ARE INVITED
-      ===================================================== */}
-
-      <section className="invitation">
-
-        <div className="invitation-orb invitation-orb-one" />
-        <div className="invitation-orb invitation-orb-two" />
-
-        <div className="section-container">
-
-          <p className="eyebrow">
-            AN EVENING TO REMEMBER
-          </p>
-
-          <div className="gold-divider">
-            <span />
-            <b>✦</b>
-            <span />
-          </div>
-
-          <h2 className="invitation-heading">
-            You Are
-            <br />
-            <span>Invited.</span>
-          </h2>
-
-          <p className="invitation-description">
-            To an unforgettable evening of lights, music,
-            Bollywood and memories.
-          </p>
-
-          <div className="invitation-card">
-
-            <div className="card-logo">
-
-              <img
-                src="/logosrms.jpeg"
-                alt="SRMS"
-              />
-
-            </div>
-
-            <p className="card-college">
-              SHRI RAM MURTI SMARAK
-            </p>
-
-            <p className="card-college-small">
-              INTERNATIONAL BUSINESS SCHOOL
-            </p>
-
-            <div className="card-line" />
-
-            <p className="cordially">
-              CORDIALLY INVITES YOU TO
-            </p>
-
-            <h3>
-              Esperanza <span>4.0</span>
-            </h3>
-
-            <p className="card-party">
-              FRESHERS PARTY • 2K26
-            </p>
-
-            <div className="details-grid">
-
-              <div className="detail">
-                <span>DATE</span>
-                <strong>25 SEP</strong>
-                <small>2026</small>
-              </div>
-
-              <div className="detail">
-                <span>VENUE</span>
-                <strong>AUDITORIUM</strong>
-                <small>SRMS IBS</small>
-              </div>
-
-              <div className="detail">
-                <span>THEME</span>
-                <strong>BOLLYWOOD</strong>
-                <small>90s → NOW</small>
-              </div>
-
-            </div>
-
-            <p className="quote">
-              “Where hope meets the horizon.”
-            </p>
-
-          </div>
-
-          <p className="organized">
-            ORGANIZED BY MANAGEMENT CLUB
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* =====================================================
-          COUNTDOWN
-      ===================================================== */}
-
-      <section className="countdown-section">
-
-        <div className="section-container countdown-container">
-
-          <p className="eyebrow">
-            THE COUNTDOWN BEGINS
-          </p>
-
-          <h2>
-            The Night Is
-            <span> Almost Here.</span>
-          </h2>
-
-          <Countdown />
-
-        </div>
-
-      </section>
-
-      {/* =====================================================
-          FILM STRIP
-      ===================================================== */}
-
-      <section className="film-strip">
-
-        <div className="film-track">
-
-          {[
-            "LIGHTS",
-            "CAMERA",
-            "MUSIC",
-            "DANCE",
-            "BOLLYWOOD",
-            "MEMORIES",
-            "ESPERANZA",
-            "LIGHTS",
-            "CAMERA",
-            "MUSIC",
-            "DANCE",
-            "BOLLYWOOD",
-            "MEMORIES",
-            "ESPERANZA",
-          ].map((item, index) => (
-            <div
-              className="film-item"
-              key={index}
-            >
-              <span>{item}</span>
-              <b>✦</b>
-            </div>
-          ))}
-
-        </div>
-
-      </section>
-
-      {/* =====================================================
-          REEL
-      ===================================================== */}
-
-      <section className="reel-section">
-
-        <div className="section-container">
-
-          <div className="reel-heading">
-
-            <p className="eyebrow">
-              YOUR FIRST GLIMPSE
-            </p>
-
-            <h2>
-              The Night
-              <br />
-              <span>Is Calling.</span>
-            </h2>
-
-            <p>
-              Turn up the volume and experience
-              the Esperanza 4.0 teaser.
-            </p>
-
-          </div>
-
-          <div className="reel-frame">
-
-            <div className="reel-top">
-
-              <span>
-                ESPERANZA 4.0
-              </span>
-
-              <span>
-                FRESHERS 2K26
-              </span>
-
-            </div>
-
-            <div className="video-wrapper">
-
-              <video
-                ref={reelRef}
-                src="/reel.mp4"
-                controls
-                playsInline
-                preload="metadata"
-                onPlay={handleReelPlay}
-                onPause={handleReelPause}
-                onEnded={handleReelEnded}
-              />
-
-              {!reelPlaying && (
-                <div className="video-hint">
-                  <div>
-                    ▶
-                  </div>
-                </div>
-              )}
-
-            </div>
-
-            <div className="reel-bottom">
-
-              <span>LIGHTS</span>
-              <span>CAMERA</span>
-              <span>ACTION</span>
-
-            </div>
-
-          </div>
-
-          <p className="audio-note">
-            ORIGINAL TEASER AUDIO • MAIN MUSIC PAUSES AUTOMATICALLY
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* =====================================================
-          BOLLYWOOD THROUGH YEARS
-      ===================================================== */}
-
-      <section className="eras-section">
-
-        <div className="section-container">
-
-          <div className="eras-heading">
-
-            <p className="eyebrow">
-              A JOURNEY THROUGH TIME
-            </p>
-
-            <h2>
-              Bollywood
-              <br />
-              <span>Through The Years</span>
-            </h2>
-
-          </div>
-
-          <div className="eras-grid">
-
-            <div className="era-card">
-
-              <span className="era-number">
-                01
-              </span>
-
-              <h3>
-                90s
-              </h3>
-
-              <h4>
-                THE NOSTALGIA
-              </h4>
-
-              <p>
-                The unforgettable era of melodies,
-                romance and timeless Bollywood memories.
-              </p>
-
-              <div className="era-line" />
-
-            </div>
-
-            <div className="era-card">
-
-              <span className="era-number">
-                02
-              </span>
-
-              <h3>
-                2000s
-              </h3>
-
-              <h4>
-                THE GOLDEN ERA
-              </h4>
-
-              <p>
-                Iconic songs, unforgettable characters
-                and the sound of a generation.
-              </p>
-
-              <div className="era-line" />
-
-            </div>
-
-            <div className="era-card">
-
-              <span className="era-number">
-                03
-              </span>
-
-              <h3>
-                2010s
-              </h3>
-
-              <h4>
-                THE BLOCKBUSTERS
-              </h4>
-
-              <p>
-                Bigger stories, bigger music and
-                unforgettable cinematic moments.
-              </p>
-
-              <div className="era-line" />
-
-            </div>
-
-            <div className="era-card">
-
-              <span className="era-number">
-                04
-              </span>
-
-              <h3>
-                2026
-              </h3>
-
-              <h4>
-                THE NEW WAVE
-              </h4>
-
-              <p>
-                Your generation. Your music.
-                Your story begins tonight.
-              </p>
-
-              <div className="era-line" />
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* =====================================================
-          EXPERIENCE
-      ===================================================== */}
-
-      <section className="experience">
-
-        <div className="experience-glow" />
-
-        <div className="section-container experience-content">
-
-          <p className="eyebrow">
-            LIGHTS • MUSIC • MEMORIES
-          </p>
-
-          <h2>
-            This Isn't Just
-            <br />
-            <span>Another Party.</span>
-          </h2>
-
-          <p className="experience-description">
-            It is the beginning of your college story.
-            Dress up, show up, dance your heart out
-            and create memories that stay long after
-            the lights go down.
-          </p>
-
-          <div className="experience-grid">
-
-            <div className="experience-card">
-              <span>01</span>
-              <h3>MUSIC</h3>
-              <p>Feel every beat.</p>
-            </div>
-
-            <div className="experience-card">
-              <span>02</span>
-              <h3>DANCE</h3>
-              <p>Own the moment.</p>
-            </div>
-
-            <div className="experience-card">
-              <span>03</span>
-              <h3>MEMORIES</h3>
-              <p>Make them last.</p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* =====================================================
-          FINAL
-      ===================================================== */}
-
-      <section className="final-section">
-
-        <div className="final-glow" />
-
-        <div className="final-content">
-
-          <div className="final-logo">
-
-            <img
-              src="/logosrms.jpeg"
-              alt="SRMS"
-            />
-
-          </div>
-
-          <p className="eyebrow">
-            THE STORY BEGINS HERE
-          </p>
-
-          <h2>
-            Be There.
-          </h2>
-
-          <div className="final-divider">
-            <span />
-            <b>✦</b>
-            <span />
-          </div>
-
-          <p className="final-text">
-            Where hope meets the horizon.
-            <br />
-            Where strangers become memories.
-            <br />
-            Where your college story begins.
-          </p>
-
-          <div className="final-date">
-            25 • 09 • 2026
-          </div>
-
-          <p className="final-organized">
-            ORGANIZED BY MANAGEMENT CLUB
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* =====================================================
-          FOOTER
-      ===================================================== */}
-
-      <footer className="footer">
-
-        <p>
-          SHRI RAM MURTI SMARAK INTERNATIONAL BUSINESS SCHOOL
-        </p>
-
-        <span>
-          ESPERANZA 4.0 • FRESHERS 2K26
-        </span>
-
-      </footer>
-
-      {/* =====================================================
-          ALL CSS
-      ===================================================== */}
-
+    <>
       <style jsx global>{`
 
         * {
@@ -3491,6 +2733,762 @@ export default function Home() {
 
       `}</style>
 
+      <main className="site">
+
+      {/* =====================================================
+          MAIN MUSIC
+      ===================================================== */}
+
+      <audio
+        ref={audioRef}
+        src="/song.m4a"
+        loop
+        preload="auto"
+      />
+
+      {/* =====================================================
+          PARTICLES
+      ===================================================== */}
+
+      <Particles />
+
+      {/* =====================================================
+          CINEMATIC INTRO
+      ===================================================== */}
+
+      <section
+        className={`intro ${intro ? "intro-visible" : "intro-hidden"}`}
+      >
+        <div className="intro-light intro-light-one" />
+        <div className="intro-light intro-light-two" />
+        <div className="intro-light intro-light-three" />
+
+        <div className="curtain curtain-left" />
+        <div className="curtain curtain-right" />
+
+        <div className="intro-content">
+
+          <div className="intro-logo">
+            <img
+              src="/logosrms.jpeg"
+              alt="SRMS"
+            />
+          </div>
+
+          <p className="intro-small">
+            SHRI RAM MURTI SMARAK
+          </p>
+
+          <p className="intro-college">
+            INTERNATIONAL BUSINESS SCHOOL
+          </p>
+
+          <div className="intro-divider">
+            <span />
+            <b>✦</b>
+            <span />
+          </div>
+
+          <h1 className="intro-title">
+            ESPERANZA
+          </h1>
+
+          <p className="intro-subtitle">
+            FRESHERS 2K26
+          </p>
+
+          <button
+            onClick={startExperience}
+            className="enter-button"
+          >
+            <span>ENTER THE NIGHT</span>
+          </button>
+
+          <p className="intro-hint">
+            TAP TO BEGIN YOUR JOURNEY
+          </p>
+
+        </div>
+      </section>
+
+      {/* =====================================================
+          MUSIC CONTROL
+      ===================================================== */}
+
+      <button
+        className={`music-control ${
+          musicOn ? "music-active" : ""
+        }`}
+        onClick={toggleMusic}
+      >
+        <span className="music-icon">
+          {musicOn ? "♫" : "×"}
+        </span>
+
+        <span>
+          {musicOn ? "MUSIC ON" : "MUSIC OFF"}
+        </span>
+      </button>
+
+      {/* =====================================================
+          HEADER
+      ===================================================== */}
+
+      <header className="header">
+
+        <div className="header-inner">
+
+          <div className="brand">
+
+            <div className="brand-logo">
+              <img
+                src="/logosrms.jpeg"
+                alt="SRMS"
+              />
+            </div>
+
+            <div>
+              <p className="brand-title">
+                SRMS IBS
+              </p>
+
+              <p className="brand-subtitle">
+                FRESHERS 2K26
+              </p>
+            </div>
+
+          </div>
+
+          <div className="event-pill">
+            ESPERANZA 4.0
+          </div>
+
+        </div>
+
+      </header>
+
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
+      <section className="hero">
+
+        <div className="hero-orb hero-orb-red" />
+        <div className="hero-orb hero-orb-purple" />
+        <div className="hero-orb hero-orb-blue" />
+
+        <div className="beam beam-left" />
+        <div className="beam beam-right" />
+        <div className="beam beam-center" />
+
+        <div className="hero-content">
+
+          {/* COLLEGE */}
+
+          <div className="college-branding">
+
+            <div className="hero-logo">
+              <img
+                src="/logosrms.jpeg"
+                alt="Shri Ram Murti Smarak"
+              />
+            </div>
+
+            <h2>
+              SHRI RAM MURTI SMARAK
+            </h2>
+
+            <h3>
+              INTERNATIONAL BUSINESS SCHOOL
+            </h3>
+
+            <div className="presented">
+              <span />
+              <p>PRESENTS</p>
+              <span />
+            </div>
+
+          </div>
+
+          {/* EVENT */}
+
+          <div className="event-heading">
+
+            <p className="freshers-label">
+              FRESHERS PARTY
+            </p>
+
+            <h1>
+              ESPERANZA
+            </h1>
+
+            <div className="four-point-zero">
+
+              <span />
+              <b>4.0</b>
+              <span />
+
+            </div>
+
+            <p className="bollywood">
+              BOLLYWOOD NIGHTS
+            </p>
+
+            <p className="eras">
+              90s&nbsp;&nbsp;•&nbsp;&nbsp;2000s&nbsp;&nbsp;•&nbsp;&nbsp;2010s&nbsp;&nbsp;•&nbsp;&nbsp;CURRENT
+            </p>
+
+          </div>
+
+          {/* POSTER */}
+
+          <div className="poster-section">
+
+            <button
+              className={`poster-button ${
+                posterOpen ? "poster-open" : ""
+              }`}
+              onClick={() => setPosterOpen(true)}
+              aria-label="Open invitation poster"
+            >
+
+              <div className="poster-glow" />
+
+              <div className="poster-card">
+
+                <img
+                  src="/poster.png"
+                  alt="Esperanza 4.0 Freshers Party"
+                />
+
+                {!posterOpen && (
+                  <div className="poster-overlay">
+
+                    <div className="tap-circle">
+                      <span>✦</span>
+                    </div>
+
+                    <p>
+                      TAP TO OPEN
+                    </p>
+
+                    <small>
+                      YOUR INVITATION AWAITS
+                    </small>
+
+                  </div>
+                )}
+
+                <div className="poster-shine" />
+
+                <span className="poster-corner top-left" />
+                <span className="poster-corner top-right" />
+                <span className="poster-corner bottom-left" />
+                <span className="poster-corner bottom-right" />
+
+              </div>
+
+            </button>
+
+          </div>
+
+          <div className="scroll-hint">
+            <span>SCROLL TO DISCOVER</span>
+            <b>↓</b>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          YOU ARE INVITED
+      ===================================================== */}
+
+      <section className="invitation">
+
+        <div className="invitation-orb invitation-orb-one" />
+        <div className="invitation-orb invitation-orb-two" />
+
+        <div className="section-container">
+
+          <p className="eyebrow">
+            AN EVENING TO REMEMBER
+          </p>
+
+          <div className="gold-divider">
+            <span />
+            <b>✦</b>
+            <span />
+          </div>
+
+          <h2 className="invitation-heading">
+            You Are
+            <br />
+            <span>Invited.</span>
+          </h2>
+
+          <p className="invitation-description">
+            To an unforgettable evening of lights, music,
+            Bollywood and memories.
+          </p>
+
+          <div className="invitation-card">
+
+            <div className="card-logo">
+
+              <img
+                src="/logosrms.jpeg"
+                alt="SRMS"
+              />
+
+            </div>
+
+            <p className="card-college">
+              SHRI RAM MURTI SMARAK
+            </p>
+
+            <p className="card-college-small">
+              INTERNATIONAL BUSINESS SCHOOL
+            </p>
+
+            <div className="card-line" />
+
+            <p className="cordially">
+              CORDIALLY INVITES YOU TO
+            </p>
+
+            <h3>
+              Esperanza <span>4.0</span>
+            </h3>
+
+            <p className="card-party">
+              FRESHERS PARTY • 2K26
+            </p>
+
+            <div className="details-grid">
+
+              <div className="detail">
+                <span>DATE</span>
+                <strong>25 SEP</strong>
+                <small>2026</small>
+              </div>
+
+              <div className="detail">
+                <span>VENUE</span>
+                <strong>AUDITORIUM</strong>
+                <small>SRMS IBS</small>
+              </div>
+
+              <div className="detail">
+                <span>THEME</span>
+                <strong>BOLLYWOOD</strong>
+                <small>90s → NOW</small>
+              </div>
+
+            </div>
+
+            <p className="quote">
+              “Where hope meets the horizon.”
+            </p>
+
+          </div>
+
+          <p className="organized">
+            ORGANIZED BY MANAGEMENT CLUB
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          COUNTDOWN
+      ===================================================== */}
+
+      <section className="countdown-section">
+
+        <div className="section-container countdown-container">
+
+          <p className="eyebrow">
+            THE COUNTDOWN BEGINS
+          </p>
+
+          <h2>
+            The Night Is
+            <span> Almost Here.</span>
+          </h2>
+
+          <Countdown />
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          FILM STRIP
+      ===================================================== */}
+
+      <section className="film-strip">
+
+        <div className="film-track">
+
+          {[
+            "LIGHTS",
+            "CAMERA",
+            "MUSIC",
+            "DANCE",
+            "BOLLYWOOD",
+            "MEMORIES",
+            "ESPERANZA",
+            "LIGHTS",
+            "CAMERA",
+            "MUSIC",
+            "DANCE",
+            "BOLLYWOOD",
+            "MEMORIES",
+            "ESPERANZA",
+          ].map((item, index) => (
+            <div
+              className="film-item"
+              key={index}
+            >
+              <span>{item}</span>
+              <b>✦</b>
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          REEL
+      ===================================================== */}
+
+      <section className="reel-section">
+
+        <div className="section-container">
+
+          <div className="reel-heading">
+
+            <p className="eyebrow">
+              YOUR FIRST GLIMPSE
+            </p>
+
+            <h2>
+              The Night
+              <br />
+              <span>Is Calling.</span>
+            </h2>
+
+            <p>
+              Turn up the volume and experience
+              the Esperanza 4.0 teaser.
+            </p>
+
+          </div>
+
+          <div className="reel-frame">
+
+            <div className="reel-top">
+
+              <span>
+                ESPERANZA 4.0
+              </span>
+
+              <span>
+                FRESHERS 2K26
+              </span>
+
+            </div>
+
+            <div className="video-wrapper">
+
+              <video
+                ref={reelRef}
+                src="/reel.mp4"
+                controls
+                playsInline
+                preload="metadata"
+                onPlay={handleReelPlay}
+                onPause={handleReelPause}
+                onEnded={handleReelEnded}
+              />
+
+              {!reelPlaying && (
+                <div className="video-hint">
+                  <div>
+                    ▶
+                  </div>
+                </div>
+              )}
+
+            </div>
+
+            <div className="reel-bottom">
+
+              <span>LIGHTS</span>
+              <span>CAMERA</span>
+              <span>ACTION</span>
+
+            </div>
+
+          </div>
+
+          <p className="audio-note">
+            ORIGINAL TEASER AUDIO • MAIN MUSIC PAUSES AUTOMATICALLY
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          BOLLYWOOD THROUGH YEARS
+      ===================================================== */}
+
+      <section className="eras-section">
+
+        <div className="section-container">
+
+          <div className="eras-heading">
+
+            <p className="eyebrow">
+              A JOURNEY THROUGH TIME
+            </p>
+
+            <h2>
+              Bollywood
+              <br />
+              <span>Through The Years</span>
+            </h2>
+
+          </div>
+
+          <div className="eras-grid">
+
+            <div className="era-card">
+
+              <span className="era-number">
+                01
+              </span>
+
+              <h3>
+                90s
+              </h3>
+
+              <h4>
+                THE NOSTALGIA
+              </h4>
+
+              <p>
+                The unforgettable era of melodies,
+                romance and timeless Bollywood memories.
+              </p>
+
+              <div className="era-line" />
+
+            </div>
+
+            <div className="era-card">
+
+              <span className="era-number">
+                02
+              </span>
+
+              <h3>
+                2000s
+              </h3>
+
+              <h4>
+                THE GOLDEN ERA
+              </h4>
+
+              <p>
+                Iconic songs, unforgettable characters
+                and the sound of a generation.
+              </p>
+
+              <div className="era-line" />
+
+            </div>
+
+            <div className="era-card">
+
+              <span className="era-number">
+                03
+              </span>
+
+              <h3>
+                2010s
+              </h3>
+
+              <h4>
+                THE BLOCKBUSTERS
+              </h4>
+
+              <p>
+                Bigger stories, bigger music and
+                unforgettable cinematic moments.
+              </p>
+
+              <div className="era-line" />
+
+            </div>
+
+            <div className="era-card">
+
+              <span className="era-number">
+                04
+              </span>
+
+              <h3>
+                2026
+              </h3>
+
+              <h4>
+                THE NEW WAVE
+              </h4>
+
+              <p>
+                Your generation. Your music.
+                Your story begins tonight.
+              </p>
+
+              <div className="era-line" />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          EXPERIENCE
+      ===================================================== */}
+
+      <section className="experience">
+
+        <div className="experience-glow" />
+
+        <div className="section-container experience-content">
+
+          <p className="eyebrow">
+            LIGHTS • MUSIC • MEMORIES
+          </p>
+
+          <h2>
+            This Isn't Just
+            <br />
+            <span>Another Party.</span>
+          </h2>
+
+          <p className="experience-description">
+            It is the beginning of your college story.
+            Dress up, show up, dance your heart out
+            and create memories that stay long after
+            the lights go down.
+          </p>
+
+          <div className="experience-grid">
+
+            <div className="experience-card">
+              <span>01</span>
+              <h3>MUSIC</h3>
+              <p>Feel every beat.</p>
+            </div>
+
+            <div className="experience-card">
+              <span>02</span>
+              <h3>DANCE</h3>
+              <p>Own the moment.</p>
+            </div>
+
+            <div className="experience-card">
+              <span>03</span>
+              <h3>MEMORIES</h3>
+              <p>Make them last.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          FINAL
+      ===================================================== */}
+
+      <section className="final-section">
+
+        <div className="final-glow" />
+
+        <div className="final-content">
+
+          <div className="final-logo">
+
+            <img
+              src="/logosrms.jpeg"
+              alt="SRMS"
+            />
+
+          </div>
+
+          <p className="eyebrow">
+            THE STORY BEGINS HERE
+          </p>
+
+          <h2>
+            Be There.
+          </h2>
+
+          <div className="final-divider">
+            <span />
+            <b>✦</b>
+            <span />
+          </div>
+
+          <p className="final-text">
+            Where hope meets the horizon.
+            <br />
+            Where strangers become memories.
+            <br />
+            Where your college story begins.
+          </p>
+
+          <div className="final-date">
+            25 • 09 • 2026
+          </div>
+
+          <p className="final-organized">
+            ORGANIZED BY MANAGEMENT CLUB
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
+
+      <footer className="footer">
+
+        <p>
+          SHRI RAM MURTI SMARAK INTERNATIONAL BUSINESS SCHOOL
+        </p>
+
+        <span>
+          ESPERANZA 4.0 • FRESHERS 2K26
+        </span>
+
+      </footer>
+
     </main>
+    </>
   );
 }
