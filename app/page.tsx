@@ -2986,76 +2986,130 @@ export default function Home() {
 
         @media (max-width: 700px) {
 
+          /* Keep the existing desktop design intact; these overrides only
+             improve readability and spacing on phones. */
           .header-inner {
+            width: calc(100% - 24px);
             padding-top: 10px;
+            gap: 8px;
+          }
+
+          .brand {
+            gap: 8px;
+            padding: 6px 10px 6px 6px;
+            max-width: 62%;
           }
 
           .brand-logo {
-            width: 31px;
-            height: 31px;
+            width: 34px;
+            height: 34px;
+            flex: 0 0 34px;
           }
 
           .brand-title {
-            font-size: 8px;
+            font-size: 9px;
+            letter-spacing: .11em;
+          }
+
+          .brand-subtitle {
+            font-size: 6px;
+            letter-spacing: .16em;
           }
 
           .event-pill {
-            font-size: 6px;
-            padding:
-              8px
-              10px;
+            flex: 0 0 auto;
+            font-size: 7px;
+            padding: 8px 11px;
+            letter-spacing: .14em;
           }
 
           .hero {
-            padding:
-              115px
-              12px
-              65px;
+            min-height: auto;
+            padding: 118px 14px 70px;
           }
 
-          .college-branding h2 {
-            font-size: 21px;
-            line-height: 1.2;
-          }
-
-          .college-branding h3 {
-            font-size: 10px;
-            line-height: 1.5;
+          .hero-content,
+          .section-container {
+            width: 100%;
+            max-width: 100%;
           }
 
           .hero-logo {
-            width: 65px;
-            height: 65px;
+            width: 72px;
+            height: 72px;
+          }
+
+          .college-branding h2 {
+            margin-top: 18px;
+            font-size: clamp(20px, 6vw, 25px);
+            line-height: 1.18;
+            letter-spacing: .035em;
+          }
+
+          .college-branding h3 {
+            font-size: clamp(10px, 3.2vw, 14px);
+            line-height: 1.45;
+            letter-spacing: .12em;
+            padding: 0 6px;
+          }
+
+          .presented {
+            margin-top: 17px;
+          }
+
+          .presented span {
+            width: 42px;
+          }
+
+          .presented p {
+            font-size: 8px;
+            letter-spacing: .3em;
+          }
+
+          .event-heading {
+            margin-top: 27px;
           }
 
           .freshers-label {
-            font-size: 8px;
+            font-size: 9px;
+            letter-spacing: .34em;
           }
 
           .event-heading h1 {
-            font-size: 55px;
+            font-size: clamp(54px, 16vw, 78px);
+            line-height: .88;
+            letter-spacing: .045em;
+            white-space: nowrap;
+          }
+
+          .four-point-zero {
+            gap: 12px;
+            margin-top: 8px;
+          }
+
+          .four-point-zero span {
+            width: 38px;
           }
 
           .four-point-zero b {
             font-size: 25px;
           }
 
-          .four-point-zero span {
-            width: 35px;
-          }
-
           .bollywood {
-            font-size: 10px;
-            letter-spacing: .25em;
+            font-size: 11px;
+            letter-spacing: .22em;
+            margin-top: 15px;
           }
 
           .eras {
-            font-size: 6px;
-            letter-spacing: .16em;
+            font-size: 7px;
+            letter-spacing: .12em;
+            line-height: 1.7;
           }
 
           .poster-section {
-            margin-top: 35px;
+            width: 100%;
+            margin-top: 32px;
           }
 
           .poster-card {
@@ -3068,169 +3122,371 @@ export default function Home() {
           }
 
           .tap-circle {
-            width: 65px;
-            height: 65px;
+            width: 64px;
+            height: 64px;
           }
 
           .poster-overlay p {
             font-size: 8px;
+            letter-spacing: .25em;
           }
 
           .poster-overlay small {
             font-size: 6px;
+            letter-spacing: .12em;
           }
 
+          .scroll-hint {
+            margin-top: 24px;
+          }
+
+          /* INVITATION — this is the main mobile fix */
           .invitation {
-            padding:
-              110px
-              15px;
+            padding: 82px 14px 90px;
+          }
+
+          .eyebrow {
+            font-size: 8px;
+            letter-spacing: .32em;
+            line-height: 1.6;
+          }
+
+          .gold-divider {
+            margin-top: 18px;
+            gap: 9px;
+          }
+
+          .gold-divider span {
+            width: 34px;
           }
 
           .invitation-heading {
-            font-size: 62px;
+            margin-top: 27px;
+            font-size: clamp(52px, 17vw, 72px);
+            line-height: .88;
+            letter-spacing: -.02em;
           }
 
           .invitation-description {
-            font-size: 12px;
+            width: min(100%, 340px);
+            margin-top: 24px;
+            padding: 0 6px;
+            font-size: 13px;
+            line-height: 1.75;
           }
 
           .invitation-card {
-            padding:
-              38px
-              15px;
-            border-radius: 25px;
+            width: 100%;
+            margin-top: 38px;
+            padding: 30px 16px 28px;
+            border-radius: 24px;
+          }
+
+          .card-logo {
+            width: 72px;
+            height: 72px;
           }
 
           .card-college {
-            font-size: 8px;
-            letter-spacing: .18em;
+            margin-top: 19px;
+            font-size: 9px;
+            letter-spacing: .13em;
+            line-height: 1.5;
           }
 
           .card-college-small {
             font-size: 6px;
-            letter-spacing: .15em;
+            letter-spacing: .12em;
+            line-height: 1.6;
+          }
+
+          .card-line {
+            margin: 23px auto;
+          }
+
+          .cordially {
+            font-size: 7px;
+            letter-spacing: .25em;
           }
 
           .invitation-card h3 {
-            font-size: 40px;
+            margin-top: 16px;
+            font-size: clamp(36px, 11vw, 48px);
+            line-height: 1;
           }
 
           .card-party {
             font-size: 7px;
-            letter-spacing: .22em;
+            letter-spacing: .16em;
+            line-height: 1.7;
           }
 
           .details-grid {
             grid-template-columns: 1fr;
-            gap: 8px;
+            gap: 9px;
+            margin-top: 30px;
           }
 
           .detail {
-            min-height: 75px;
+            min-height: 76px;
+            padding: 12px 8px;
+            border-radius: 15px;
+          }
+
+          .detail span {
+            font-size: 7px;
+          }
+
+          .detail strong {
+            margin-top: 7px;
+            font-size: 12px;
+            letter-spacing: .1em;
+          }
+
+          .detail small {
+            margin-top: 4px;
+            font-size: 7px;
+          }
+
+          .quote {
+            margin-top: 27px;
+            font-size: 15px;
+            line-height: 1.5;
+          }
+
+          .organized {
+            margin-top: 24px;
+            font-size: 6px;
+            letter-spacing: .22em;
+            line-height: 1.7;
           }
 
           .countdown-section {
-            padding:
-              100px
-              15px;
+            padding: 82px 14px;
+          }
+
+          .countdown-container h2 {
+            margin-top: 24px;
+            font-size: clamp(38px, 11vw, 52px);
+            line-height: .92;
           }
 
           .countdown-grid {
-            gap: 6px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            margin-top: 34px;
           }
 
           .countdown-box {
-            padding:
-              18px
-              4px;
-            border-radius: 14px;
+            padding: 17px 6px;
+            border-radius: 15px;
+          }
+
+          .countdown-number {
+            font-size: 30px;
           }
 
           .countdown-label {
-            font-size: 5px;
-            letter-spacing: .15em;
+            font-size: 6px;
+            letter-spacing: .16em;
+          }
+
+          .reel-section,
+          .eras-section,
+          .experience {
+            padding-left: 14px;
+            padding-right: 14px;
           }
 
           .reel-section {
-            padding:
-              110px
-              12px;
+            padding-top: 90px;
+            padding-bottom: 90px;
+          }
+
+          .reel-heading h2,
+          .eras-heading h2,
+          .experience h2 {
+            font-size: clamp(45px, 14vw, 68px);
+            line-height: .9;
+          }
+
+          .reel-heading > p:last-child,
+          .experience-description {
+            font-size: 13px;
+            line-height: 1.8;
           }
 
           .reel-frame {
+            width: 100%;
+            margin-top: 38px;
             padding: 5px;
-            border-radius: 22px;
+            border-radius: 20px;
+          }
+
+          .reel-top,
+          .reel-bottom {
+            padding: 9px 5px;
+            font-size: 6px;
+            letter-spacing: .18em;
           }
 
           .video-wrapper {
-            border-radius: 16px;
+            border-radius: 14px;
+          }
+
+          .video-wrapper video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+          }
+
+          .audio-note {
+            font-size: 6px;
+            line-height: 1.6;
+            letter-spacing: .16em;
           }
 
           .eras-section {
-            padding:
-              110px
-              15px;
+            padding-top: 90px;
+            padding-bottom: 90px;
           }
 
           .eras-grid {
             grid-template-columns: 1fr;
             gap: 12px;
-            margin-top: 45px;
+            margin-top: 38px;
           }
 
           .era-card {
-            min-height: 240px;
-            padding: 28px;
+            min-height: 215px;
+            padding: 25px;
+            border-radius: 22px;
           }
 
           .era-card h3 {
-            font-size: 55px;
+            font-size: 48px;
+          }
+
+          .era-card p {
+            font-size: 12px;
+            line-height: 1.75;
           }
 
           .experience {
-            padding:
-              110px
-              15px;
+            padding-top: 95px;
+            padding-bottom: 95px;
           }
 
           .experience-grid {
             grid-template-columns: 1fr;
             gap: 10px;
-            margin-top: 45px;
+            margin-top: 38px;
           }
 
           .experience-card {
-            padding:
-              28px
-              20px;
+            padding: 27px 20px;
           }
 
           .final-section {
-            min-height: 80vh;
-            padding:
-              80px
-              15px;
+            min-height: 75vh;
+            padding: 75px 14px;
+          }
+
+          .final-logo {
+            width: 76px;
+            height: 76px;
+          }
+
+          .final-content .eyebrow {
+            margin-top: 28px;
           }
 
           .final-content h2 {
-            font-size: 75px;
+            margin-top: 28px;
+            font-size: clamp(62px, 20vw, 90px);
+          }
+
+          .final-text {
+            font-size: 12px;
+            line-height: 1.9;
+          }
+
+          .final-date {
+            margin-top: 28px;
+            padding: 13px 22px;
+            font-size: 8px;
+            letter-spacing: .25em;
+          }
+
+          .final-organized {
+            margin-top: 34px;
+            font-size: 6px;
+            letter-spacing: .25em;
+          }
+
+          .footer {
+            padding: 25px 14px;
+          }
+
+          .footer p,
+          .footer span {
+            font-size: 6px;
+            letter-spacing: .16em;
+            line-height: 1.7;
           }
 
           .music-control {
             right: 10px;
             bottom: 10px;
-            padding:
-              6px
-              10px
-              6px
-              6px;
+            padding: 6px 10px 6px 6px;
+            font-size: 7px;
           }
 
           .music-icon {
-            width: 27px;
-            height: 27px;
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        @media (max-width: 380px) {
+          .header-inner {
+            width: calc(100% - 18px);
           }
 
+          .brand {
+            max-width: 60%;
+          }
+
+          .brand-title {
+            font-size: 8px;
+          }
+
+          .event-pill {
+            font-size: 6px;
+            padding: 7px 9px;
+          }
+
+          .hero {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          .event-heading h1 {
+            font-size: 50px;
+          }
+
+          .invitation {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          .invitation-card {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
+
+          .invitation-heading {
+            font-size: 50px;
+          }
         }
 
       `}</style>
