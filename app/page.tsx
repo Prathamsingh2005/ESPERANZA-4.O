@@ -520,7 +520,7 @@ export default function Home() {
           </p>
 
           <h2>
-            The Night Is
+            The Day Is
             <span> Almost Here.</span>
           </h2>
 
@@ -582,7 +582,7 @@ export default function Home() {
             </p>
 
             <h2>
-              The Night
+              The Day
               <br />
               <span>Is Calling.</span>
             </h2>
@@ -758,7 +758,7 @@ export default function Home() {
 
               <p>
                 Your generation. Your music.
-                Your story begins tonight.
+                Your story begins today.
               </p>
 
               <div className="era-line" />
