@@ -180,9 +180,9 @@ export default function Home() {
             />
           </div>
 
-          <h1 className="intro-small">
+          <p className="intro-small">
             SHRI RAM MURTI SMARAK
-          </h1>
+          </p>
 
           <h1 className="intro-college">
             INTERNATIONAL BUSINESS SCHOOL
@@ -209,9 +209,9 @@ export default function Home() {
   <span>Join The Celebration</span>
 </button>
 
-          <p className="intro-hint">
+          <h1 className="intro-hint">
             TAP TO BEGIN YOUR JOURNEY
-          </p>
+          </h1>
 
         </div>
       </section>
@@ -299,9 +299,9 @@ export default function Home() {
               />
             </div>
 
-            <h1>
+            <h2>
               SHRI RAM MURTI SMARAK
-            </h1>
+            </h2>
 
             <h3>
               INTERNATIONAL BUSINESS SCHOOL
@@ -418,7 +418,7 @@ export default function Home() {
         <div className="section-container">
 
           <p className="eyebrow">
-            AN EVENING TO REMEMBER
+            A DAY FULL OF MEMORIES 
           </p>
 
           <div className="gold-divider">
@@ -434,8 +434,8 @@ export default function Home() {
           </h2>
 
           <p className="invitation-description">
-            To an unforgettable evening of lights, music,
-            Bollywood and memories.
+            To a vibrant day of music, laughter, dance and
+            Unforgettable.
           </p>
 
           <div className="invitation-card">
@@ -1053,17 +1053,17 @@ export default function Home() {
         }
 
         .intro-small {
-          margin-top: 30px;
-          font-size: 20px;
+          margin-top: 20px;
+          font-size: 18px;
           font-weight: 800;
-          letter-spacing: .45em;
+          letter-spacing: .20em;
           color: #ff9bc4;
         }
 
         .intro-college {
           margin-top: 10px;
           font-size: 15px;
-          letter-spacing: .35em;
+          letter-spacing: .10em;
           color: rgba(255,255,255,.45);
         }
 
@@ -1186,7 +1186,7 @@ export default function Home() {
           background:
             linear-gradient(
               110deg,
-              transparent,
+              yellow,
               rgba(255,255,255,.3),
               transparent
             );
@@ -2132,8 +2132,8 @@ export default function Home() {
         }
 
         .card-logo {
-          width: 85px;
-          height: 85px;
+          width: 115px;
+          height: 115px;
           margin: auto;
           padding: 5px;
           border: 1px solid rgba(255,215,100,.4);
@@ -2799,48 +2799,31 @@ export default function Home() {
         }
 
         .experience-grid {
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-          gap: 15px;
-          margin-top: 65px;
-        }
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 40px !important;
+  }
 
-        .experience-card {
-          padding: 40px 20px;
-          border: 1px solid rgba(255,255,255,.08);
-          border-radius: 25px;
-          background: rgba(255,255,255,.025);
-          transition: all .5s ease;
-        }
+  .experience-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 30px 20px !important;
+  }
 
-        .experience-card:hover {
-          transform: translateY(-8px);
-          border-color: rgba(255,0,120,.3);
-        }
+  .experience-card h3 {
+    font-size: 38px !important;
+    white-space: normal !important;
+  }
 
-        .experience-card span {
-          font-size: 8px;
-          color: #ff4d98;
-        }
-
-        .experience-card h3 {
-          margin:
-            25px
-            0
-            0;
-          font-family: Georgia, serif;
-          font-size: 25px;
-          font-weight: 400;
-        }
-
-        .experience-card p {
-          margin:
-            8px
-            0
-            0;
-          color: #555;
-          font-size: 11px;
-        }
+  .experience-card p {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+  }
+}
 
 
         /* =====================================================
@@ -2986,459 +2969,204 @@ export default function Home() {
         }
 
 
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 700px) {
-
-          /* Keep the existing desktop design intact; these overrides only
-             improve readability and spacing on phones. */
-          .header-inner {
-            width: calc(100% - 24px);
-            padding-top: 10px;
-            gap: 8px;
-          }
-
-          .brand {
-            gap: 8px;
-            padding: 6px 10px 6px 6px;
-            max-width: 62%;
-          }
-
-          .brand-logo {
-            width: 34px;
-            height: 34px;
-            flex: 0 0 34px;
-          }
-
-          .brand-title {
-            font-size: 9px;
-            letter-spacing: .11em;
-          }
-
-          .brand-subtitle {
-            font-size: 6px;
-            letter-spacing: .16em;
-          }
-
-          .event-pill {
-            flex: 0 0 auto;
-            font-size: 7px;
-            padding: 8px 11px;
-            letter-spacing: .14em;
-          }
-
-          .hero {
-            min-height: auto;
-            padding: 118px 14px 70px;
-          }
-
-          .hero-content,
-          .section-container {
-            width: 100%;
-            max-width: 100%;
-          }
-
-          .hero-logo {
-            width: 72px;
-            height: 72px;
-          }
-
-          .college-branding h2 {
-            margin-top: 18px;
-            font-size: clamp(20px, 6vw, 25px);
-            line-height: 1.18;
-            letter-spacing: .035em;
-          }
-
-          .college-branding h3 {
-            font-size: clamp(10px, 3.2vw, 14px);
-            line-height: 1.45;
-            letter-spacing: .12em;
-            padding: 0 6px;
-          }
-
-          .presented {
-            margin-top: 17px;
-          }
-
-          .presented span {
-            width: 42px;
-          }
-
-          .presented p {
-            font-size: 8px;
-            letter-spacing: .3em;
-          }
-
-          .event-heading {
-            margin-top: 27px;
-          }
-
-          .freshers-label {
-            font-size: 22px;
-            letter-spacing: .34em;
-          }
-
-          .event-heading h1 {
-            font-size: clamp(54px, 16vw, 78px);
-            line-height: .88;
-            letter-spacing: .045em;
-            white-space: nowrap;
-          }
-
-          .four-point-zero {
-            gap: 12px;
-            margin-top: 8px;
-          }
-
-          .four-point-zero span {
-            width: 38px;
-          }
-
-          .four-point-zero b {
-            font-size: 25px;
-          }
-
-          .bollywood {
-            font-size: 11px;
-            letter-spacing: .22em;
-            margin-top: 15px;
-          }
-
-          .eras {
-            font-size: 7px;
-            letter-spacing: .12em;
-            line-height: 1.7;
-          }
-
-          .poster-section {
-            width: 100%;
-            margin-top: 32px;
-          }
-
-          .poster-card {
-            border-radius: 14px;
-          }
-
-          .poster-glow {
-            inset: -8px;
-            filter: blur(16px);
-          }
-
-          .tap-circle {
-            width: 64px;
-            height: 64px;
-          }
-
-          .poster-overlay p {
-            font-size: 8px;
-            letter-spacing: .25em;
-          }
-
-          .poster-overlay small {
-            font-size: 6px;
-            letter-spacing: .12em;
-          }
-
-          .scroll-hint {
-            margin-top: 24px;
-          }
-
-          /* INVITATION — this is the main mobile fix */
-          .invitation {
-            padding: 82px 14px 90px;
-          }
-
-          .eyebrow {
-            font-size: 8px;
-            letter-spacing: .32em;
-            line-height: 1.6;
-          }
-
-          .gold-divider {
-            margin-top: 18px;
-            gap: 9px;
-          }
-
-          .gold-divider span {
-            width: 34px;
-          }
-
-          .invitation-heading {
-            margin-top: 27px;
-            font-size: clamp(52px, 17vw, 72px);
-            line-height: .88;
-            letter-spacing: -.02em;
-          }
-
-          .invitation-description {
-            width: min(100%, 340px);
-            margin-top: 24px;
-            padding: 0 6px;
-            font-size: 13px;
-            line-height: 1.75;
-          }
-
-          .invitation-card {
-            width: 100%;
-            margin-top: 38px;
-            padding: 30px 16px 28px;
-            border-radius: 24px;
-          }
-
-          .card-logo {
-            width: 72px;
-            height: 72px;
-          }
-
-          .card-college {
-            margin-top: 19px;
-            font-size: 9px;
-            letter-spacing: .13em;
-            line-height: 1.5;
-          }
-
-          .card-college-small {
-            font-size: 6px;
-            letter-spacing: .12em;
-            line-height: 1.6;
-          }
-
-          .card-line {
-            margin: 23px auto;
-          }
-
-          .cordially {
-            font-size: 7px;
-            letter-spacing: .25em;
-          }
-
-          .invitation-card h3 {
-            margin-top: 16px;
-            font-size: clamp(36px, 11vw, 48px);
-            line-height: 1;
-          }
-
-          .card-party {
-            font-size: 7px;
-            letter-spacing: .16em;
-            line-height: 1.7;
-          }
-
-          .details-grid {
-            grid-template-columns: 1fr;
-            gap: 9px;
-            margin-top: 30px;
-          }
-
-          .detail {
-            min-height: 76px;
-            padding: 12px 8px;
-            border-radius: 15px;
-          }
-
-          .detail span {
-            font-size: 7px;
-          }
-
-          .detail strong {
-            margin-top: 7px;
-            font-size: 12px;
-            letter-spacing: .1em;
-          }
-
-          .detail small {
-            margin-top: 4px;
-            font-size: 7px;
-          }
-
-          .quote {
-            margin-top: 27px;
-            font-size: 15px;
-            line-height: 1.5;
-          }
-
-          .organized {
-            margin-top: 24px;
-            font-size: 6px;
-            letter-spacing: .22em;
-            line-height: 1.7;
-          }
-
-          .countdown-section {
-            padding: 82px 14px;
-          }
-
-          .countdown-container h2 {
-            margin-top: 24px;
-            font-size: clamp(38px, 11vw, 52px);
-            line-height: .92;
-          }
-
-          .countdown-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 8px;
-            margin-top: 34px;
-          }
-
-          .countdown-box {
-            padding: 17px 6px;
-            border-radius: 15px;
-          }
-
-          .countdown-number {
-            font-size: 30px;
-          }
-
-          .countdown-label {
-            font-size: 6px;
-            letter-spacing: .16em;
-          }
-
-          .reel-section,
-          .eras-section,
-          .experience {
-            padding-left: 14px;
-            padding-right: 14px;
-          }
-
-          .reel-section {
-            padding-top: 90px;
-            padding-bottom: 90px;
-          }
-
-          .reel-heading h2,
-          .eras-heading h2,
-          .experience h2 {
-            font-size: clamp(45px, 14vw, 68px);
-            line-height: .9;
-          }
-
-          .reel-heading > p:last-child,
-          .experience-description {
-            font-size: 13px;
-            line-height: 1.8;
-          }
-
-          .reel-frame {
-            width: 100%;
-            margin-top: 38px;
-            padding: 5px;
-            border-radius: 20px;
-          }
-
-          .reel-top,
-          .reel-bottom {
-            padding: 9px 5px;
-            font-size: 6px;
-            letter-spacing: .18em;
-          }
-
-          .video-wrapper {
-            border-radius: 14px;
-          }
-
-          .video-wrapper video {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-          }
-
-          .audio-note {
-            font-size: 6px;
-            line-height: 1.6;
-            letter-spacing: .16em;
-          }
-
-          .eras-section {
-            padding-top: 90px;
-            padding-bottom: 90px;
-          }
-
-          .eras-grid {
-            grid-template-columns: 1fr;
-            gap: 12px;
-            margin-top: 38px;
-          }
-
-          .era-card {
-            min-height: 215px;
-            padding: 25px;
-            border-radius: 22px;
-          }
-
-          .era-card h3 {
-            font-size: 48px;
-          }
-
-          .era-card p {
-            font-size: 12px;
-            line-height: 1.75;
-          }
-
-          .experience {
-            padding-top: 95px;
-            padding-bottom: 95px;
-          }
-
-          .experience-grid {
-            grid-template-columns: 1fr;
-            gap: 10px;
-            margin-top: 38px;
-          }
-
-          .experience-card {
-            padding: 27px 20px;
-          }
-
-          .final-section {
-            min-height: 75vh;
-            padding: 75px 14px;
-          }
-
-          .final-logo {
-            width: 76px;
-            height: 76px;
-          }
-
-          .final-content .eyebrow {
-            margin-top: 28px;
-          }
-
-          .final-content h2 {
-            margin-top: 28px;
-            font-size: clamp(62px, 20vw, 90px);
-          }
-
-          .final-text {
-            font-size: 12px;
-            line-height: 1.9;
-          }
-
-          .final-date {
-            margin-top: 28px;
-            padding: 13px 22px;
-            font-size: 8px;
-            letter-spacing: .25em;
-          }
-
-          .final-organized {
-            margin-top: 34px;
-            font-size: 6px;
-            letter-spacing: .25em;
-          }
-
-          .footer {
-            padding: 25px 14px;
-          }
-
-          .footer p,
-          .footer span {
-            font-size: 6px;
-            letter-spacing: .16em;
-            line-height: 1.7;
-          }
+       /* =========================================================
+   FINAL MOBILE TYPOGRAPHY
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* College name */
+  .college-branding h2 {
+    font-size: 26px !important;
+    line-height: 1.2;
+    letter-spacing: .04em;
+  }
+
+  .college-branding h3 {
+    font-size: 14px !important;
+    line-height: 1.5;
+    letter-spacing: .10em;
+  }
+
+  /* PRESENTS / small headings */
+  .presented p {
+    font-size: 10px !important;
+  }
+
+  .freshers-label {
+    font-size: 11px !important;
+  }
+
+  /* ESPERANZA */
+  .event-heading h1 {
+    font-size: clamp(38px, 13vw, 56px) !important;
+    line-height: .9;
+    letter-spacing: 0 !important;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+  }
+
+  .four-point-zero b {
+    font-size: 28px !important;
+  }
+
+  .bollywood {
+    font-size: 13px !important;
+  }
+
+  .eras {
+    font-size: 8px !important;
+  }
+
+
+  /* =====================================================
+     INVITATION PAGE
+     ===================================================== */
+
+  /* CORDIALLY INVITES YOU TO */
+  .eyebrow {
+    font-size: 10px !important;
+    letter-spacing: .25em;
+    line-height: 1.6;
+  }
+
+  /* Esperanza 4.0 heading */
+  .invitation-heading {
+    font-size: clamp(54px, 17vw, 72px) !important;
+    line-height: .9;
+  }
+
+  /* Description */
+  .invitation-description {
+    font-size: 15px !important;
+    line-height: 1.75;
+  }
+
+
+  /* Invitation card college name */
+  .card-college {
+    font-size: 12px !important;
+    letter-spacing: .12em;
+    line-height: 1.5;
+  }
+
+  .card-college-small {
+    font-size: 9px !important;
+    letter-spacing: .10em;
+    line-height: 1.6;
+  }
+
+  .cordially {
+  font-size: 10px !important;
+  letter-spacing: .22em;
+}
+
+  /* FRESHERS PARTY • 2K26 */
+  .card-party {
+    font-size: 9px !important;
+    letter-spacing: .14em;
+    line-height: 1.7;
+  }
+
+  /* Date / Venue / Theme labels */
+  .detail strong {
+  font-size: 15px !important;
+  letter-spacing: .08em;
+}
+
+  /* 25 SEP / AUDITORIUM / BOLLYWOOD */
+  .detail strong {
+    font-size: 15px !important;
+    letter-spacing: .08em;
+  }
+
+  /* 2026 / SRMS IBS / 90s → NOW */
+  .detail small {
+    font-size: 8px !important;
+    letter-spacing: .15em;
+  }
+
+  /* Quote */
+  .quote {
+    font-size: 17px !important;
+    line-height: 1.5;
+  }
+
+  .organized {
+    font-size: 8px !important;
+    letter-spacing: .18em;
+    line-height: 1.7;
+  }
+
+
+  /* =====================================================
+     COUNTDOWN
+     ===================================================== */
+
+  .countdown-container h2 {
+    font-size: clamp(42px, 12vw, 55px) !important;
+  }
+
+  .countdown-number {
+    font-size: 32px !important;
+  }
+
+  .countdown-label {
+    font-size: 8px !important;
+    letter-spacing: .12em;
+  }
+
+
+  /* =====================================================
+     REEL / ERAS / EXPERIENCE
+     ===================================================== */
+
+  .reel-heading h2,
+  .eras-heading h2,
+  .experience h2 {
+    font-size: clamp(48px, 14vw, 68px) !important;
+  }
+
+  .reel-heading > p:last-child,
+  .experience-description {
+    font-size: 14px !important;
+    line-height: 1.8;
+  }
+
+  .era-card h3 {
+    font-size: 50px !important;
+  }
+
+  .era-card p {
+    font-size: 13px !important;
+    line-height: 1.75;
+  }
+
+
+  /* =====================================================
+     FINAL SECTION
+     ===================================================== */
+
+  .final-text {
+    font-size: 13px !important;
+    line-height: 1.9;
+  }
+
+  .final-date {
+    font-size: 9px !important;
+  }
+
+  .final-organized {
+    font-size: 8px !important;
+  }
+
+  .footer p,
+  .footer span {
+    font-size: 7px !important;
+    line-height: 1.7;
+  }
+}
 
           .music-control {
             right: 10px;
@@ -3477,8 +3205,13 @@ export default function Home() {
           }
 
           .event-heading h1 {
-            font-size: 50px;
-          }
+  font-size: clamp(38px, 13vw, 56px);
+  line-height: .9;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
 
           .invitation {
             padding-left: 10px;
