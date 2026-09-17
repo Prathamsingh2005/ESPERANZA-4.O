@@ -180,13 +180,13 @@ export default function Home() {
             />
           </div>
 
-          <p className="intro-small">
+          <h1 className="intro-small">
             SHRI RAM MURTI SMARAK
-          </p>
+          </h1>
 
-          <p className="intro-college">
+          <h1 className="intro-college">
             INTERNATIONAL BUSINESS SCHOOL
-          </p>
+          </h1>
 
           <div className="intro-divider">
             <span />
@@ -198,16 +198,16 @@ export default function Home() {
             ESPERANZA
           </h1>
 
-          <p className="intro-subtitle">
+          <h1 className="intro-subtitle">
             FRESHERS 2K26
-          </p>
+          </h1>
 
-          <button
-            onClick={startExperience}
-            className="enter-button"
-          >
-            <span>ENTER THE NIGHT</span>
-          </button>
+         <button
+  onClick={startExperience}
+  className="enter-button"
+>
+  <span>Join The Celebration</span>
+</button>
 
           <p className="intro-hint">
             TAP TO BEGIN YOUR JOURNEY
@@ -257,9 +257,9 @@ export default function Home() {
                 SRMS IBS
               </p>
 
-              <p className="brand-subtitle">
+              <h1 className="brand-subtitle">
                 FRESHERS 2K26
-              </p>
+              </h1>
             </div>
 
           </div>
@@ -299,9 +299,9 @@ export default function Home() {
               />
             </div>
 
-            <h2>
+            <h1>
               SHRI RAM MURTI SMARAK
-            </h2>
+            </h1>
 
             <h3>
               INTERNATIONAL BUSINESS SCHOOL
@@ -309,7 +309,7 @@ export default function Home() {
 
             <div className="presented">
               <span />
-              <p>PRESENTS</p>
+              <h3>PRESENTS</h3>
               <span />
             </div>
 
@@ -335,9 +335,9 @@ export default function Home() {
 
             </div>
 
-            <p className="bollywood">
-              BOLLYWOOD NIGHTS
-            </p>
+            <h2 className="bollywood">
+              DAY LIGHT DHAMAKA!
+            </h2>
 
             <p className="eras">
               90s&nbsp;&nbsp;•&nbsp;&nbsp;2000s&nbsp;&nbsp;•&nbsp;&nbsp;2010s&nbsp;&nbsp;•&nbsp;&nbsp;CURRENT
@@ -1054,7 +1054,7 @@ export default function Home() {
 
         .intro-small {
           margin-top: 30px;
-          font-size: 10px;
+          font-size: 20px;
           font-weight: 800;
           letter-spacing: .45em;
           color: #ff9bc4;
@@ -1062,7 +1062,7 @@ export default function Home() {
 
         .intro-college {
           margin-top: 10px;
-          font-size: 9px;
+          font-size: 15px;
           letter-spacing: .35em;
           color: rgba(255,255,255,.45);
         }
@@ -1146,32 +1146,38 @@ export default function Home() {
 
         .intro-subtitle {
           margin-top: 15px;
-          font-size: 10px;
+          font-size: 15px;
           font-weight: 800;
           letter-spacing: .5em;
           color: rgba(255,255,255,.55);
         }
 
         .enter-button {
-          position: relative;
-          margin-top: 45px;
-          padding: 17px 35px;
-          border-radius: 999px;
-          border: 1px solid rgba(255,70,140,.65);
-          background:
-            linear-gradient(
-              100deg,
-              rgba(255,0,100,.18),
-              rgba(110,40,255,.18)
-            );
-          color: white;
-          font-size: 9px;
-          font-weight: 800;
-          letter-spacing: .3em;
-          cursor: pointer;
-          overflow: hidden;
-          transition: all .4s ease;
-        }
+  position: relative;
+  margin-top: 45px;
+  padding: 22px 48px;
+  min-width: 300px;
+  min-height: 70px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,70,140,.65);
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(255,0,100,.18),
+      rgba(110,40,255,.18)
+    );
+
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .18em;
+
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .4s ease;
+}
 
         .enter-button::before {
           content: "";
@@ -3071,7 +3077,7 @@ export default function Home() {
           }
 
           .freshers-label {
-            font-size: 9px;
+            font-size: 22px;
             letter-spacing: .34em;
           }
 
